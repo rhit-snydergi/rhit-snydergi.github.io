@@ -1,3 +1,8 @@
+:root{
+    --vertical-space: 2rem;
+    --horizontal-space: 3rem;
+}
+
 body {
     background: #DDDDDD;
     font-size: 18px;
@@ -18,21 +23,25 @@ p {
 
 body {
     display: grid;
-    grid-template-areas: "head nav"
+    grid-template-areas: "head head"
+        "nav nav"
         "main main"
         "foot foot";
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto 1fr auto;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto 1fr auto;
 }
 
 @media screen and (min-width: 25em) {
-    body > nav ul li{
-        display:list-item;
+    body {
+        grid-template-areas: "head head"
+            "nav main"
+            "foot foot";
     }
 }
 
-body > * {
-    padding-left: 4rem;
+body>* {
+    padding-left: var(--horizontal-space);
+    padding-right: var(--horizontal-space);
 }
 
 body>header {
@@ -55,20 +64,18 @@ body>footer {
     background-color: #DDDDDD;
 }
 
-header,footer {
-    padding-top: 1.33rem;
-    padding-bottom: 1.33rem;
+header,
+footer {
+    padding-top: var(--vertical-space);
+    padding-bottom: var(--vertical-space);
 }
 
-header h1, footer h1 {
+header h1,
+footer h1 {
     margin: 0;
 }
 
-body > nav ul {
+body>nav ul {
     list-style-type: none;
     padding: 0;
-}
-
-body > nav ul li{
-    display: inline-flex;
 }
