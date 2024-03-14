@@ -1,6 +1,5 @@
 body {
     background: #DDDDDD;
-    padding-left: 4em;
     font-size: 18px;
     line-height: 1.5;
 }
@@ -19,11 +18,21 @@ p {
 
 body {
     display: grid;
-    grid-template-areas: "head head"
-        "nav main"
+    grid-template-areas: "head nav"
+        "main main"
         "foot foot";
-    grid-template-columns: 10em 1fr;
+    grid-template-columns: 1fr auto;
     grid-template-rows: auto 1fr auto;
+}
+
+@media screen and (min-width: 25em) {
+    body > nav ul li{
+        display:list-item;
+    }
+}
+
+body > * {
+    padding-left: 4rem;
 }
 
 body>header {
@@ -44,4 +53,22 @@ body>main {
 body>footer {
     grid-area: foot;
     background-color: #DDDDDD;
+}
+
+header,footer {
+    padding-top: 1.33rem;
+    padding-bottom: 1.33rem;
+}
+
+header h1, footer h1 {
+    margin: 0;
+}
+
+body > nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+body > nav ul li{
+    display: inline-flex;
 }
