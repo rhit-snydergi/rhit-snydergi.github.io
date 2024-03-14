@@ -1,12 +1,47 @@
 body {
     background: #DDDDDD;
-}
-
-.navbar {
-    background-color: #800000;
-    color: white;
+    padding-left: 4em;
+    font-size: 18px;
+    line-height: 1.5;
 }
 
 .page-container {
     margin-top: 75px;
+}
+
+body#about img {
+    height: 15em;
+}
+
+p {
+    max-width: 50em;
+}
+
+body {
+    display: grid;
+    grid-template-areas: "head head"
+        "nav main"
+        "foot foot";
+    grid-template-columns: 10em 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+
+body>header {
+    grid-area: head;
+    background-color: #DDDDDD;
+}
+
+body>nav {
+    grid-area: nav;
+    background-color: #DDDDDD;
+}
+
+body>main {
+    grid-area: main;
+    background-color: #DDDDDD;
+}
+
+body>footer {
+    grid-area: foot;
+    background-color: #DDDDDD;
 }
