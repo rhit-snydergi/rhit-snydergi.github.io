@@ -118,3 +118,9 @@ body#portfolio ul#portfolioitems {
 body#portfolio ul#portfolioitems li img {
     max-width: 100%;
 }
+
+.fl-builder-content[data-type="header"].fl-theme-builder-header-sticky {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
