@@ -85,10 +85,13 @@ body>footer {
     grid-area: foot;
 }
 
-header,
 footer {
     padding-top: var(--vertical-space);
     padding-bottom: var(--vertical-space);
+}
+
+header {
+    padding-top: var(--vertical-space);
 }
 
 header h1,
