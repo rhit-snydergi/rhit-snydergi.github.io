@@ -66,6 +66,7 @@ body {
 body>* {
     padding-left: var(--horizontal-space);
     padding-right: var(--horizontal-space);
+    padding-top: 50px;
 }
 
 body>header {
